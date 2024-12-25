@@ -1,5 +1,7 @@
 # Next.js on CF Workers 🎉
 
+![Build workflow](https://github.com/golamrabbiazad/cf-workers-nextjs/actions/workflows/ci.yml/badge.svg)
+
 First, run the development server:
 
 ```bash
