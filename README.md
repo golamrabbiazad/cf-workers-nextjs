@@ -9,18 +9,16 @@ First, run the development server:
 bun i
 
 # run on local env
-bun run preview:worker
+bun run preview
 ```
 
-Open [http://localhost:8771](http://localhost:8771) with your browser to see the result.
+Open [http://localhost:8787](http://localhost:8787) with your browser to see the result.
 
-## Cloudflare integration
-
-Besides the script mentioned above `c3` has added a few extra scripts that allow you to integrate the application with the [Cloudflare Workers](https://workers.cloudflare.com/) environment, these are:
+## Application scripts
 
 - `build:worker` to build the application for Workers using the [`@opennextjs/cloudflare`](https://github.com/opennextjs/opennextjs-cloudflare) CLI
-- `dev:worker` to locally preview your Workers application using the [Wrangler](https://developers.cloudflare.com/workers/wrangler/) CLI
-- `deploy:worker` to deploy your Workers application using the [Wrangler](https://developers.cloudflare.com/workers/wrangler/) CLI
+- `preview` to build and locally preview the application for Workers using the [Wrangler](https://developers.cloudflare.com/workers/wrangler/) CLI
+- `deploy` to deploy your Workers application using the [Wrangler](https://developers.cloudflare.com/workers/wrangler/) CLI
 
 After doing this you can run the `dev` or `preview` script and visit the `/api/hello` route to see the example in action.
 

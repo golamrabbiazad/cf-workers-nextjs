@@ -7,16 +7,16 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
     "build:worker": "opennextjs-cloudflare",
-    "dev:worker": "wrangler dev --port 8771",
-    "preview:worker": "bun run build:worker && bun run dev:worker",
-    "deploy:worker": "bun run build:worker && wrangler deploy"
+    "preview": "opennextjs-cloudflare && wrangler dev",
+    "deploy": "opennextjs-cloudflare && wrangler deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts"
   },
   "dependencies": {
+    "lenis": "^1.1.18",
+    "next": "^15.1.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "^15.1.2"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241224.0",
@@ -26,9 +26,9 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.1.0",
+    "eslint-config-next": "^15.1.2",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5",
     "vercel": "^39.2.2",
     "wrangler": "^3.99.0"
